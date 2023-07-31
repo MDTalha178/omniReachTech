@@ -13,14 +13,14 @@
     <header class="head">
        <div class="upper-nav">
         <ul>
-            <li><img src="./assets/location.png" alt="location">Kote Qila,Bazbahahdur City,Azamgarh, UP INDIA.</li>
+            <li><img src="./assets/location.png" alt="location">Uttar Pradesh INDIA.</li>
             <li><img src="./assets/clock.png" alt="clock">Mon - Fri 17.00 - 5.00 AM Sat - Sun CLOSED</li>
             <li><img src="./assets/phone.png" alt="clock">01204332188</li>
         </ul>
        </div>
        <div class="lower-nav">
         <div class="logo">
-            <img src="./assets/logo.png">
+            <img src="./assets/PHOTO-2023-07-23-18-09-32.jpg">
         </div>
         <nav>
             <ul>
@@ -28,7 +28,6 @@
                 <a href="#about"><li>About us</li></a>
                 <a href="#contact"><li>Contacts</li></a>
                 <li><i class="fa-brands fa-linkedin fa-bounce fa-lg"></i></li>
-                <li><i class="fa-brands fa-instagram fa-bounce fa-lg"></i></li>
                 <li><i class="fa-brands fa-twitter fa-bounce fa-lg"></i></li>
             </ul>
         </nav>
@@ -86,7 +85,30 @@
                     
                     With today’s businesses already being stretched thin with the pressures to keep up with customers and other competing firms, it can be hard to think about other important things such as business security and streamlining the processes you currently have in place.</p>
             </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./assets/business-people-casual-meeting.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./assets/conception-success-group-young-freelancers-office-have-conversation-smiling.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./assets/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept.jpg" style="width:100%">
+                </div>
+                
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
         </section>
+        <!-- image slider -->
         <!--Query section-->
         <section class="query" id="contact">
             <div class="quey-section">
@@ -97,9 +119,9 @@
                 </div>
                 <div class="send-query">
                     <form class="send-query"action="https://formspree.io/f/xnqykdjr" method="POST">
-                        <input name="message" class="common-cars" type="tel" placeholder="First name" required>
+                        <input name="message" class="common-cars" type="text" placeholder="Full name" required>
+                        <input name="message" class="common-cars" type="text" placeholder="Email" required>
                         <input name="message" class="common-cars" type="tel" placeholder="Phone number" required>
-                        <input name="message" class="common-cars" type="text" placeholder="Last  name" required>
                         <button>Submit</button>
                     </form>
                 </div>
@@ -108,20 +130,39 @@
         <!--Footer-->
         <footer class="footer">
            <div>
-            <img src="./assets/new_demo.jpg" alt="footer">
+            <img src="./assets/PHOTO-2023-07-23-18-09-32.jpg" alt="footer">
             <p id="footer-head">Consulting</p>
             <p id="footer-para">Our IT services can help smooth the technology and business, helping to keep companies competitive without being<br> forced to hire an expensive in-house team, or waste the valuable<br> time of staff that are trained to do other things. We offer reliable solutions that are more than just a few techs on staff to help you<br> get through software upgrades.</p>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce fa-xl"></i></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-instagram fa-bounce fa-xl"></i></a>
                 <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-twitter fa-bounce fa-xl"></i></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-youtube fa-bounce fa-xl"></i></a>
             </div>
             <hr>
-            <p class="copy">Copyright © 2023-2024 AtosRubicon. All rights reserved</p>
+            <p class="copy">Copyright © 2023-2024 Omnireach Technology. All rights reserved</p>
            </div>
         </footer>
     </main>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+          }
+    </script>
 </body>
 </html>
 
